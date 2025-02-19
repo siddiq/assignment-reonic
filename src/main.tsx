@@ -8,7 +8,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/assignment-reonic">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/task1" element={<Task1 />} />
