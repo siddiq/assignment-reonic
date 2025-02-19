@@ -1,0 +1,31 @@
+.task2a.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.task2a .title {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: bold;
+  margin-bottom: 1rem; /* 4 */
+}
+
+.task2a .space-y-4 > * + * {
+  margin-top: 1rem; /* 4 */
+}
+
+.task2a .label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* 4 */
+}
+
+.task2a .input {
+  margin-left: 0.5rem; /* 2 */
+  padding: 0.5rem; /* 2 */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.25rem; /* rounded */
+}
