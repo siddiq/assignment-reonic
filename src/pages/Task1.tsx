@@ -5,6 +5,7 @@ import {
   SimulationConfig,
   SimulationResult
 } from '../utils/simulation'
+import Results from '../components/Results'
 
 const config: SimulationConfig = {
   numChargepoints: 20,
@@ -27,24 +28,7 @@ const Task1: React.FC = () => {
         Run Simulation
       </button>
 
-      {results && (
-        <div className="results">
-          <p>
-            <strong>Total Energy Consumed:</strong> {results.totalEnergy} kWh
-          </p>
-          <p>
-            <strong>Theoretical Max Power Demand:</strong>{' '}
-            {results.theoreticalMaxPower} kW
-          </p>
-          <p>
-            <strong>Actual Max Power Demand:</strong> {results.actualMaxPower}{' '}
-            kW
-          </p>
-          <p>
-            <strong>Concurrency Factor:</strong> {results.concurrencyFactor}
-          </p>
-        </div>
-      )}
+      {results && <Results results={results} />}
     </div>
   )
 }

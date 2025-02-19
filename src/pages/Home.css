@@ -4,38 +4,31 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin: 0;
   padding: 1rem;
-}
-
-.home .title {
-  font-size: 2rem; /* 2xl */
-  font-weight: bold;
-  margin-bottom: 1.5rem; /* 6 */
 }
 
 .home .link {
   display: block;
-  padding: 0.75rem 1.5rem; /* px-6 py-3 */
-  border-radius: 0.5rem; /* rounded-lg */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   text-align: center;
   color: white;
   text-decoration: none;
-  margin-bottom: 1rem; /* 4 */
+  margin-bottom: 1rem;
 }
 
 .home .link-blue {
-  background-color: #3b82f6; /* blue-500 */
+  background-color: #3b82f6;
 }
 
 .home .link-blue:hover {
-  background-color: #2563eb; /* blue-600 */
+  background-color: #2563eb;
 }
 
 .home .link-green {
-  background-color: #10b981; /* green-500 */
+  background-color: #10b981;
 }
 
 .home .link-green:hover {
-  background-color: #059669; /* green-600 */
+  background-color: #059669;
 }

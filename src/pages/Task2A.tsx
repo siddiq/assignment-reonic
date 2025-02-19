@@ -5,14 +5,14 @@ import {
   SimulationResult
 } from '../utils/simulation'
 import './Task2A.css'
+import Results from '../components/Results'
 
 const Task2A: React.FC = () => {
   const [numChargepoints, setNumChargepoints] = useState<number>(20)
   const [arrivalMultiplier, setArrivalMultiplier] = useState<number>(100)
   const [consumptionOfTheCars, setConsumptionOfTheCars] = useState<number>(18)
   const [chargingPower, setChargingPower] = useState<number>(11)
-  const [simulationResult, setSimulationResult] =
-    useState<SimulationResult | null>(null)
+  const [results, setResults] = useState<SimulationResult | null>(null)
 
   const handleRunSimulation = () => {
     const config: SimulationConfig = {
@@ -23,13 +23,12 @@ const Task2A: React.FC = () => {
       energyConsumptionPerCar: consumptionOfTheCars
     }
 
-    runSimulation(config, setSimulationResult)
+    runSimulation(config, setResults)
   }
 
   return (
     <div className="task2a container">
       <h1 className="title">Charging Simulation Settings</h1>
-
       <div className="space-y-4">
         <label className="label">
           Number of Chargepoints:
@@ -76,17 +75,7 @@ const Task2A: React.FC = () => {
         </button>
       </div>
 
-      {simulationResult && (
-        <div className="results">
-          <h2 className="title">Simulation Results</h2>
-          <p>Total Energy Consumed: {simulationResult.totalEnergy} kWh</p>
-          <p>
-            Theoretical Max Power: {simulationResult.theoreticalMaxPower} kW
-          </p>
-          <p>Actual Max Power: {simulationResult.actualMaxPower} kW</p>
-          <p>Concurrency Factor: {simulationResult.concurrencyFactor}</p>
-        </div>
-      )}
+      {results && <Results results={results} />}
     </div>
   )
 }
