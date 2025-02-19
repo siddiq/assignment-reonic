@@ -5,6 +5,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 1rem;
+  position: relative;
 }
 
 .home .link {
@@ -31,4 +32,12 @@
 
 .home .link-green:hover {
   background-color: #059669;
+}
+
+.home .copyright {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  font-size: 0.875rem;
+  color: #6b7280;
 }

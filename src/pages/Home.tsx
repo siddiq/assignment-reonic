@@ -15,6 +15,8 @@ const Home: React.FC = () => {
           Visualization & Parameters (Task 2A)
         </Link>
       </div>
+
+      <div className="home copyright">&copy; Siddiq</div>
     </div>
   )
 }
